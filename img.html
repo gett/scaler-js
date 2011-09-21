@@ -43,13 +43,22 @@
 							var img = new Image();
 							img.src = fr.result;
 
-							img.onload = function() {
+							img.onload = function () {
+							    var canvas = document.createElement('canvas'), ctx;
+							    canvas.width = 188;
+							    canvas.height = 150;
+							    document.body.appendChild(canvas);
+							    ctx = canvas.getContext('2d');
+							    ctx.drawImage(img,0,0,188,150);
+							};
+
+							/*img.onload = function() {
 								var canvas = document.createElement("canvas");
 								new thumbnailer(canvas, img, 188, 3);
 								document.body.appendChild(canvas);
 								console.log('encoded');
 								//console.log(canvas.toDataURL());
-							};
+							};*/
 						};
 					})(file);
 				};
