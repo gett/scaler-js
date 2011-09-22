@@ -21,12 +21,17 @@
 	var getDimensions = function(originWidth, originHeight, w, h) {
 		var ratio = originWidth/originHeight;
 
-		if (originWidth > w) {
+		if (originWidth > w || !h) {
 			return [w, Math.round(w / ratio)];
 		}
-		if (originHeight > h) {
+		if (originHeight > h || !w) {
 			return [Math.round(w * ratio), h];
 		}
+		if (!w) {
+			return [originWidth * h / originHeight, h];
+		}
+
+		return [w, h];
 	};
 
 	var hasCanvas = function (){
