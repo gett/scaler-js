@@ -34,12 +34,10 @@
 	};
 
 	var hasFileReader = function() {
-		return typeof FileReader != 'undefined';
+		return typeof FileReader !== 'undefined';
 	};
 
-	scaler.isSupported = function() {
-		return hasCanvas() && hasFileReader();
-	};
+	scaler.supported = hasCanvas() && hasFileReader();
 
 	scaler.scale = function(file, w, h, cb) {
 		if (typeof file === 'string') {

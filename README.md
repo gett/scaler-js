@@ -3,7 +3,7 @@ a image scaling wrapper to canvas
 
 ``` js
 // checks if the browser supports Canvas and FileReader
-scaler.isSupported();
+scaler.supported;
 
 // file can be a path or a FileReader object 
 scaler.scale(file, width, height, function(err, data) {
