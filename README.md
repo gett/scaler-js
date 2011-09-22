@@ -2,13 +2,14 @@
 a image scaling wrapper to canvas
 
 ``` js
+// checks if the browser supports Canvas and FileReader
 scaler.isSupported();
-// check if the browser supports Canvas and FileReader
 
+// file can be a path or a FileReader object 
 scaler.scale(file, width, height, function(err, data) {
 	// base64 string of the scaled image
 });
-// file can be a path or a FileReader object 
+
 ```
 
 try it out, server.js and hit http://localhost:10000 and select some images
