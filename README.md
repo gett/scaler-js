@@ -5,7 +5,7 @@ a image scaling wrapper to canvas
 // checks if the browser supports Canvas and FileReader
 scaler.supported;
 
-// file can be a path or a FileReader object 
+// file can be a path or a File object 
 scaler.scale(file, width, height, function(err, data) {
 	// base64 string of the scaled image
 });
